@@ -1,0 +1,22 @@
+{
+  "name": "ios-dance-party",
+  "version": "1.0.0",
+  "description": "♫〜(￣▽￣〜)(〜￣▽￣)〜",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/expo/ios-dance-party.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/expo/ios-dance-party/issues"
+  },
+  "homepage": "https://github.com/expo/ios-dance-party#readme",
+  "dependencies": {
+    "junit-report-builder": "^1.3.0"
+  }
+}

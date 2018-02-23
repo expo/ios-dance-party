@@ -1,0 +1,29 @@
+version: 2
+jobs:
+  build:
+    macos:
+      xcode: "9.2.0"
+
+    steps:
+      - checkout
+      - run: git lfs pull
+
+      - run:
+          name: Start iOS simulator
+          # note: this command prints a usage error we ignore
+          command: xcrun instruments -w "iPhone X (11.2) [" || true
+      
+      - run:
+          name: Install standalone app on iOS simulator
+          command: xcrun simctl install booted test-suite.app
+      
+      - run:
+          name: Install npm packages
+          command: yarn
+
+      - run:
+          name: Run test-suite in iOS simulator
+          command: node test.js
+
+      - store_test_results:
+          path: /tmp/test-results
